@@ -50,7 +50,8 @@ const Header = props => {
 const mapStateToProps = state => {
   //state -store
   return {
-    focused: state.header.focused //map the focused of store to props
+    //map the focused of store to props
+    focused: state.getIn(["header", "focused"])
   };
 };
 const mapDispathToProps = dispatch => {
